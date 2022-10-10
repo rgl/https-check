@@ -1,0 +1,19 @@
+[package]
+name = "https-check"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[features]
+default = ["dangerous_configuration"]
+dangerous_configuration = ["rustls/dangerous_configuration"]
+
+[dependencies]
+rustls = "0.20.6"
+rustls-native-certs = "0.6.2"
+rustls-pemfile = "1.0.1"
+ureq = "2.5.0"
+xflags = "0.3.0"
+
+[build-dependencies]
+built = "0.5.1"
